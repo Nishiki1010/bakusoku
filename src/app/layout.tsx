@@ -12,9 +12,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://bakusoku-tau.vercel.app"
+
 export const metadata: Metadata = {
   title: "bakusoku — AIで作ったアプリ、買い取ります",
-  description: "AIバイブコーディングで作ったアプリを買い取り、リアルなビジネス課題とマッチング。キャナルAI by Team Energy Group。",
+  description:
+    "AIバイブコーディングで作ったアプリを5万〜50万円以上で買い取り。査定無料、BuyApp.ai提携。実力を認めたビルダーにはグループ企業32社のリアルな事業課題をご紹介。",
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    title: "bakusoku — AIで作ったアプリ、買い取ります",
+    description:
+      "AIバイブコーディングで作ったアプリを5万〜50万円以上で買い取り。査定無料、BuyApp.ai提携。",
+    url: siteUrl,
+    siteName: "bakusoku",
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "bakusoku — AIで作ったアプリ、買い取ります",
+    description:
+      "AIバイブコーディングで作ったアプリを5万〜50万円以上で買い取り。査定無料、BuyApp.ai提携。",
+  },
 };
 
 export default function RootLayout({
