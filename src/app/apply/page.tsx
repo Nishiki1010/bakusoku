@@ -1,9 +1,8 @@
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 
-// TODO: Google Formsの公開URLに差し替え
-const GOOGLE_FORM_URL =
-  process.env.NEXT_PUBLIC_GOOGLE_FORM_URL || ""
+const BUYAPP_URL = "https://buyapp.ai"
+const GOOGLE_FORM_URL = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL || ""
 
 export default function ApplyPage() {
   return (
@@ -16,49 +15,62 @@ export default function ApplyPage() {
         </div>
       </header>
 
-      <main className="max-w-xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-bold mb-2">アプリを応募する</h2>
-        <p className="text-gray-600 mb-8">
-          AIで作ったアプリの情報を教えてください。内容を確認し、3営業日以内にご連絡いたします。
-        </p>
+      <main className="max-w-2xl mx-auto px-6 py-16 space-y-8">
+        <div>
+          <h2 className="text-2xl font-bold mb-2">応募する</h2>
+          <p className="text-gray-600">
+            2つの方法でAIビルダーとして参加できます。
+          </p>
+        </div>
 
         <Card>
-          <CardContent className="pt-6 space-y-6">
-            <div className="space-y-3">
-              <h3 className="font-semibold">応募に必要なもの</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex gap-2"><span>1.</span>デプロイ済みのアプリURL</li>
-                <li className="flex gap-2"><span>2.</span>GitHubリポジトリ（あれば）</li>
-                <li className="flex gap-2"><span>3.</span>使用したAIツール名</li>
-                <li className="flex gap-2"><span>4.</span>アプリの説明</li>
-                <li className="flex gap-2"><span>5.</span>連絡先メールアドレス</li>
-              </ul>
+          <CardContent className="pt-6 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</div>
+              <h3 className="text-lg font-bold">アプリを売る</h3>
             </div>
+            <p className="text-gray-600 text-sm">
+              AIで作ったアプリをBuyApp.aiで査定。品質に応じて5万〜50万円以上で買い取り。
+              査定無料、最短7日。
+            </p>
+            <a
+              href={BUYAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center text-lg py-4 rounded-md bg-black text-white font-medium hover:bg-gray-800 transition-colors"
+            >
+              BuyApp.ai で無料査定する
+            </a>
+          </CardContent>
+        </Card>
 
+        <Card>
+          <CardContent className="pt-6 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</div>
+              <h3 className="text-lg font-bold">事業課題マッチング</h3>
+            </div>
+            <p className="text-gray-600 text-sm">
+              Team Energyグループ32社のリアルな事業課題に挑戦。
+              キャナルAIがPMとして伴走し、資本とユーザーがつきます。
+              買い取り実績のあるビルダー優先。
+            </p>
             {GOOGLE_FORM_URL ? (
-              <>
-                <a
-                  href={GOOGLE_FORM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center text-lg py-4 rounded-md bg-black text-white font-medium hover:bg-gray-800 transition-colors"
-                >
-                  応募フォームを開く
-                </a>
-                <p className="text-xs text-center text-gray-400">
-                  Googleフォームが開きます
-                </p>
-              </>
+              <a
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center text-lg py-4 rounded-md border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+              >
+                事業課題マッチングに応募する
+              </a>
             ) : (
-              <div className="text-center py-4">
-                <p className="text-gray-500 mb-2">フォームを準備中です。</p>
-                <a
-                  href="mailto:integral0519@gmail.com?subject=bakusoku応募"
-                  className="text-blue-600 underline text-sm"
-                >
-                  メールで応募する →
-                </a>
-              </div>
+              <a
+                href="mailto:integral0519@gmail.com?subject=bakusoku 事業課題マッチング応募"
+                className="block w-full text-center text-lg py-4 rounded-md border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+              >
+                メールで応募する
+              </a>
             )}
           </CardContent>
         </Card>
