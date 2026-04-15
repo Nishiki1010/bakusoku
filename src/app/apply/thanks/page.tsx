@@ -14,12 +14,12 @@ export default function ThanksPage() {
       <main className="flex-1 flex items-center justify-center px-6">
         <div className="text-center max-w-md">
           <div className="text-5xl mb-6">✓</div>
-          <h2 className="text-2xl font-bold mb-4">応募ありがとうございます</h2>
+          <h2 className="text-2xl font-bold mb-4">提出ありがとうございます</h2>
           <p className="text-gray-600 mb-2">
-            内容を確認の上、3営業日以内にご連絡いたします。
+            内容を確認の上、3営業日以内にフィードバックをお送りします。
           </p>
           <p className="text-gray-500 text-sm mb-8">
-            まずはBuyApp.aiでアプリを査定して、スコアを確認してみてください。
+            BuyApp.aiでアプリを査定して、買い取り価格も確認してみてください。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
