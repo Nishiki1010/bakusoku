@@ -15,14 +15,14 @@ const geistMono = Geist_Mono({
 const siteUrl = "https://bakusoku-tau.vercel.app"
 
 export const metadata: Metadata = {
-  title: "bakusoku — AIで作ったアプリ、買い取ります",
+  title: "bakusoku — 「作って終わり」を、終わりにする。",
   description:
-    "AIバイブコーディングで作ったアプリを5万〜50万円以上で買い取り。査定無料、BuyApp.ai提携。実力を認めたビルダーにはグループ企業32社のリアルな事業課題をご紹介。",
+    "AIで作ったアプリを見せてください。フィードバックします。買い取ります。仕事も渡します。認定ビルダーにはグループ企業32社の事業課題をご紹介。",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "bakusoku — AIで作ったアプリ、買い取ります",
+    title: "bakusoku — 「作って終わり」を、終わりにする。",
     description:
-      "AIバイブコーディングで作ったアプリを5万〜50万円以上で買い取り。査定無料、BuyApp.ai提携。",
+      "腕試し、歓迎。AIで作ったアプリにフィードバック・買い取り・仕事を。",
     url: siteUrl,
     siteName: "bakusoku",
     locale: "ja_JP",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "bakusoku — AIで作ったアプリ、買い取ります",
+    title: "bakusoku — 「作って終わり」を、終わりにする。",
     description:
-      "AIバイブコーディングで作ったアプリを5万〜50万円以上で買い取り。査定無料、BuyApp.ai提携。",
+      "腕試し、歓迎。AIで作ったアプリにフィードバック・買い取り・仕事を。",
   },
 };
 
